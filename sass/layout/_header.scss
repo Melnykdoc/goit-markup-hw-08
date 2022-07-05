@@ -12,7 +12,9 @@
     }
   }
 }
-
+.current {
+  color: var(--accent-color);
+}
 .header .logo {
   display: block;
   padding-top: 16px;
@@ -101,6 +103,7 @@
 .navigation__link {
   display: block;
   padding-bottom: 32px;
+  @include transition(color);
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     &.current {
@@ -119,6 +122,9 @@
 }
 
 .navigation__link:hover {
+  color: var(--accent-color);
+}
+.navigation__link:focus {
   color: var(--accent-color);
 }
 .navigation__item:not(:last-child) {
@@ -151,6 +157,7 @@
 .information__link {
   display: block;
   padding-bottom: 32px;
+  @include transition(color);
   @include font(500, 24px, 1.16, 0.02em);
   color: var(--text-color);
   @media screen and (min-width: 768px) {
@@ -176,10 +183,14 @@
 .information__link:hover {
   color: var(--accent-color);
 }
+.information__link:focus {
+  color: var(--accent-color);
+}
 .icon {
   display: none;
   padding-right: 10px;
   vertical-align: middle;
+  @include transition((color, fill));
   @media screen and (min-width: 768px) {
     display: inline-flex;
     padding-right: 8px;

@@ -149,6 +149,10 @@ body {
   }
 }
 
+.current {
+  color: var(--accent-color);
+}
+
 .logo:hover .logo__accent {
   color: var(--accent-color);
 }
@@ -301,6 +305,9 @@ body {
 .navigation__link {
   display: block;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .navigation__link {
@@ -323,6 +330,10 @@ body {
 }
 
 .navigation__link:hover {
+  color: var(--accent-color);
+}
+
+.navigation__link:focus {
   color: var(--accent-color);
 }
 
@@ -367,6 +378,9 @@ body {
 .information__link {
   display: block;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -420,10 +434,17 @@ body {
   color: var(--accent-color);
 }
 
+.information__link:focus {
+  color: var(--accent-color);
+}
+
 .icon {
   display: none;
   padding-right: 10px;
   vertical-align: middle;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .icon {
@@ -487,16 +508,6 @@ body {
 .information-social__item:last-child {
   border-right: none;
   padding-right: 0;
-}
-
-.link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.current {
-  color: var(--accent-color);
 }
 
 .social {
@@ -597,6 +608,9 @@ body {
   background-color: var(--background-primary-btn);
   border: var(--accent-color);
   border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .primary-btn:focus, .primary-btn:hover {
   background-color: var(--add-accent-color);

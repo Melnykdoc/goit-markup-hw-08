@@ -180,6 +180,10 @@ body {
   }
 }
 
+.current {
+  color: var(--accent-color);
+}
+
 .header .logo {
   display: block;
   padding-top: 16px;
@@ -301,6 +305,9 @@ body {
 .navigation__link {
   display: block;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .navigation__link {
@@ -323,6 +330,10 @@ body {
 }
 
 .navigation__link:hover {
+  color: var(--accent-color);
+}
+
+.navigation__link:focus {
   color: var(--accent-color);
 }
 
@@ -367,6 +378,9 @@ body {
 .information__link {
   display: block;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -420,10 +434,17 @@ body {
   color: var(--accent-color);
 }
 
+.information__link:focus {
+  color: var(--accent-color);
+}
+
 .icon {
   display: none;
   padding-right: 10px;
   vertical-align: middle;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .icon {
@@ -489,16 +510,6 @@ body {
   padding-right: 0;
 }
 
-.link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.current {
-  color: var(--accent-color);
-}
-
 .social {
   display: flex;
 }
@@ -527,13 +538,25 @@ body {
 
 .filter {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  justify-content: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    justify-content: center;
+  }
+}
+
 .filter__btn {
   align-items: center;
   padding: 6px 22px 6px 22px;
@@ -552,6 +575,10 @@ body {
 .filter__btn.current {
   color: var(--primary-btn-color);
   background-color: var(--background-primary-btn);
+}
+
+.filter .filter__item {
+  margin-bottom: 10px;
 }
 
 .filter .filter__item:not(:last-child) {
@@ -586,11 +613,24 @@ body {
 
 .portfolio__card {
   padding: 20px 24px;
-  width: 370px;
+  width: 100%;
+  max-width: 450px;
   background: var(--background-header);
   border: 1px solid #eeeeee;
 }
-.portfolio__card:hover, .portfolio__card:focus {
+@media screen and (min-width: 768px) {
+  .portfolio__card {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card {
+    max-width: 370px;
+  }
+}
+
+.portfolio__card:hover,
+.portfolio__card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -624,9 +664,19 @@ body {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  padding: 63px 24px;
+  padding: 77px 24px 77px 24px;
   color: var(--primary-btn-color);
   background-color: rgba(33, 150, 243, 0.9);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-transition__text {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-transition__text {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio__item:hover .portfolio-transition__text {
