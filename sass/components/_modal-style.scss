@@ -1,0 +1,51 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    background-color: rgba(47, 48, 58, 0.4);
+    width: 100vw;
+    height: 100vh;
+    @include size(100vw, 100vh, null);
+    opacity: 1;
+    @include transition(opacity);
+}
+.modal {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%) scale(1);
+    @include transition(transform, 950ms);
+    @include size(528px, null, 4px);
+    padding: 40px;
+    background: var(--primary-btn-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    .backdrop.is-hidden & {
+        transform: translate(50%, 50%) scale(15);
+        @include transition(transform, 950ms);
+    }
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @include size(30px, 30px, 50%);
+    background: var(--primary-btn-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-btn__icon {
+    fill: var(--secondary-btn-color);
+    @include size(100%, 100%, null);
+    .modal-btn:hover & {
+        fill: var(--accent-color);
+    }
+    .modal-btn:focus & {
+        fill: var(--accent-color);
+    }
+}
+
+.is-hidden {
+    opacity: 0.5;
+    visibility: hidden;
+    pointer-events: none;
+}
