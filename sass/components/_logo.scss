@@ -1,19 +1,18 @@
 .logo {
-    font-family: 'Raleway', sans-serif;
-    @include font(700, 24px, 1.19, 0.03em);
-    color: var(--logo-color);
-    @include transition(color);
-    @media screen and (min-width: 1200px) {
-        @include font(700, 26px, 1.16, null);
-        }
-    & .link:focus,
-    & .link:hover {
-        color: var(--accent-color);
-    }
+  font-family: "Raleway", sans-serif;
+  @include font(700, 24px, 1.19, 0.03em);
+  color: var(--logo-color);
+  @include transition(color);
+  @media screen and (min-width: 1200px) {
+    @include font(700, 26px, 1.16, null);
+  }
 }
-.header__accent {
-    color: var(--main-color);
+.logo:hover .logo__accent {
+  color: var(--accent-color);
 }
-.footer__accent {
-    color: var(--address-color);
+.logo__accent {
+  color: var(--main-color);
+}
+.logo__accent--white {
+  color: #fff;
 }

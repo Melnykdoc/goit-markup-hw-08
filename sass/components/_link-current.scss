@@ -1,20 +1,6 @@
 .link {
-    &.current {
-        position: relative;
-        // &::after {
-        //     position: absolute;
-        //     left: 0;
-        //     bottom: 0;
-        //     content: '';
-        //     display: block;
-        //     @include size(100%, 4px, 2px);
-        //     background-color: var(--accent-color);
-        // }
-    }
-}
-.link {
-    @include transition(color);
+  @include transition(color);
 }
 .current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
