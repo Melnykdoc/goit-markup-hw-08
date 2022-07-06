@@ -1,6 +1,10 @@
 .second-title {
+  margin-bottom: 30px;
+  @include font(700, 28px, 1.18, null);
+  text-align: center;
+  color: var(--second-title-color);
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
     @include font(700, 36px, 1.16, null);
-    text-align: center;
-    color: var(--second-title-color);
+  }
 }

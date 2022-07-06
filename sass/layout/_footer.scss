@@ -19,6 +19,9 @@
 .address__list {
   color: var(--contacts-color);
   margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .address__list .address__item:not(:last-child) {
   margin-bottom: 8px;
@@ -59,6 +62,9 @@
 .join__list.social {
   justify-content: center;
   margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .join__link {
   background-color: rgba(255, 255, 255, 0.1);
