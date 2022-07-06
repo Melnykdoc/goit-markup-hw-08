@@ -1083,6 +1083,7 @@ body {
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 }
 
 .modal {
@@ -1091,6 +1092,7 @@ body {
   position: absolute;
   bottom: 50%;
   right: 50%;
+  z-index: 3;
   transform: translate(50%, 50%) scale(1);
   transition-property: transform;
   transition-duration: 950ms;
