@@ -1,6 +1,5 @@
-
 .portfolio__list {
-display: block;
+  display: block;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -15,9 +14,9 @@ display: block;
   }
 }
 .portfolio__item {
-width: 100%;
+  width: 100%;
   max-width: 450px;
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
     width: 354px;
@@ -28,11 +27,11 @@ width: 100%;
     margin: 15px;
     width: 270px;
   }
-    &:not(:last-child) {
-      @media screen and (max-width: 767px) {
-        margin-bottom: 30px;
-      }
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
     }
+  }
 }
 .portfolio__link {
   display: block;
@@ -50,7 +49,6 @@ width: 100%;
   padding: 20px 24px 20px 24px;
   display: flex;
   flex-direction: column;
-  height: 110px;
 
   background: var(--background-header);
   border: 1px solid #eeeeee;
@@ -69,7 +67,9 @@ width: 100%;
   @include font(null, 16px, 1.88, null);
   color: var(--text-color);
 }
-
+.portfolio-transition img {
+  width: 100%;
+}
 .portfolio-transition {
   position: relative;
   overflow: hidden;

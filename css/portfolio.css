@@ -643,7 +643,6 @@ body {
   padding: 20px 24px 20px 24px;
   display: flex;
   flex-direction: column;
-  height: 110px;
   background: var(--background-header);
   border: 1px solid #eeeeee;
 }
@@ -665,6 +664,10 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--text-color);
+}
+
+.portfolio-transition img {
+  width: 100%;
 }
 
 .portfolio-transition {
