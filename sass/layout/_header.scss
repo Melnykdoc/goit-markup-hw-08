@@ -71,6 +71,7 @@
   left: 0;
   height: calc(100vh - 100%);
   width: 100%;
+  z-index: 1;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: inherit;
