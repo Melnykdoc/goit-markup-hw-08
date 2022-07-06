@@ -14,9 +14,7 @@
         margin: -15px;
     }
 }
-.team__list .team__item:not(:last-child) {
-    margin-bottom: 30px;
-}
+
 .team__item {
     width: 100%;
     max-width: 450px;
@@ -30,6 +28,11 @@
         margin: 15px;
         width: 270px;
     }
+        &:not(:last-child) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
 }
 .team__item img {
     width: 100%;

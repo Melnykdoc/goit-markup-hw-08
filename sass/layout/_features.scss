@@ -14,11 +14,9 @@
         margin: -15px;
     }
 }
-.features__list .features__item:not(:last-child) {
-    margin-bottom: 30px;
-}
+
 .features__item {
-    width: 100%;
+display: block;
     @media screen and (min-width: 768px) {
         flex-basis: calc((100% - 2 * 30px) / 2);
         margin: 15px;
@@ -27,7 +25,13 @@
         flex-basis: calc((100% - 4 * 30px) / 4);
         margin: 15px;
     }
+&:not(:last-child) {
+    @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
 }
+}
+
 .features__box {
     display: flex;
     align-items: center;
